@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title>user</title>
+    <style>
+        .container{
+            margin-top:90px;
+            margin-left: 30%;
+            background-color: rgb(92, 92, 92);
+            padding: 20px;
+            width: 300px;
+        }
+        form {
+  margin:0 auto;
+  width:300px
+}
+input {
+  margin-bottom:3px;
+  padding:10px;
+  width: 90%;
+  border:1px solid #CCC;
+  border-radius: 1cm;
+  
+}
+button {
+  padding-left:30px;
+  padding-bottom: 10px;
+  border-radius: 0.5cm;
+  text-align: center;
+  background-color: rgb(230, 80, 10);
+  border-color: coral;
+ 
+ 
+ 
+}
+label {
+  cursor:pointer
+}
+#form-switch {
+  display:none
+}
+#register-form {
+  display:none
+}
+#form-switch:checked~#register-form {
+  display:block
+}
+#form-switch:checked~#login-form {
+  display:none
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <input type='checkbox' id='form-switch'>
+   
+    
+      <div   id='login-form' >
+        <p align="center">Login</p>
+      <input type="text" placeholder="Username" [(ngModel)]="username"/>
+      <input type="password" placeholder="Password" [(ngModel)]="password" />
+      <button type="submit"  (click)="login()" >Login</button>
+      <label for='form-switch'><span>Register</span></label>
+      </div>
+  
+      <div id='register-form' >     
+           <p align="center">Register</p>
+      <input type="text" placeholder="Username" [(ngModel)]="username">
+      <input type="text" placeholder="About" [(ngModel)]="about">
+      <input type="password" placeholder="Password" [(ngModel)]="password">
+      <input type="password" placeholder="Re Password" [(ngModel)]="repassword">
+      <button type="submit" (click)="register()" >Register</button>
+      <label for='form-switch'>Login</label>
+    </div>
+
+
+</div>
+</body>
+</html>
+
+<router-outlet></router-outlet>

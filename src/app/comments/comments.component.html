@@ -1,0 +1,40 @@
+<style>
+    .content {
+        background-color: gainsboro;
+    }
+    
+    .content button {
+        color: darkcyan;
+        font-size: 12pt;
+        border-radius: 10px;
+        height: 50px;
+        width: 90px;
+        background-color: white;
+        border-style: solid;
+        border-color: darkcyan;
+    }
+    
+    .content button:hover {
+        background-color: rgb(9, 218, 165);
+        color: white;
+    }
+</style>
+
+<div class="content">
+    <button (click)="getComments()">click here</button>
+
+    <div *ngFor="let comment of comments; let i=index">
+
+        <div>
+            <form>
+                <ul>
+                    <li>{{comment.by}} on <b>{{comment.title}}</b> </li>
+                    <p>{{comment.text}}</p>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<router-outlet></router-outlet>

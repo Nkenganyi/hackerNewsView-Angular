@@ -1,0 +1,42 @@
+<style>
+    .topnav {
+        overflow: hidden;
+        background-color: darkcyan;
+    }
+    
+    .topnav a {
+        float: left;
+        display: block;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    
+    .topnav a:hover {
+        background-color: rgb(4, 104, 79);
+        color: white;
+    }
+</style>
+
+
+
+
+<div class="topnav">
+
+    <a class="nav-item nav-link" routerLink="/">Hackers News |</a>
+    <a class="nav-item nav-link" routerLink="/welcome">Welcome | </a>
+    <a class="nav-item nav-link" routerLink="/new">New | </a>
+    <a class="nav-item nav-link" routerLink="/comments">Comments | </a>
+    <a class="nav-item nav-link" routerLink="/ask">Ask | </a>
+    <a class="nav-item nav-link" routerLink="/job">Jobs | </a>
+    <a class="nav-item nav-link" routerLink="/show">Show | </a>
+    <a class="nav-item nav-link" routerLink="/submit">Submit</a>
+    <a class="nav-item nav-link" routerLink="/user">Login</a>
+</div>
+
+
+
+
+<router-outlet></router-outlet>

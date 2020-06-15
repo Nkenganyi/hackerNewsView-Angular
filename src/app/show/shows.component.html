@@ -1,0 +1,46 @@
+<style>
+    .content {
+        background-color: gainsboro;
+    }
+    
+    .content button {
+        color: darkcyan;
+        font-size: 12pt;
+        border-radius: 10px;
+        height: 50px;
+        width: 90px;
+        background-color: white;
+        border-style: solid;
+        border-color: darkcyan;
+    }
+    
+    .content button:hover {
+        background-color: rgb(9, 218, 165);
+        color: white;
+    }
+    
+    .title {
+        font-size: 14pt;
+        color: black;
+        text-decoration: none;
+    }
+</style>
+
+<div class="content">
+    <button (click)="getShowStories()">click here</button>
+
+    <div *ngFor="let story of stories; let i=index">
+
+        <div style="background-color:gray">
+            <form>
+                <ul>
+                    <li class="title"><a class="title" href="{{story.url}}">{{story.title}}</a></li>
+                    <p>{{story.score}} points by <a href="#">{{story.by}} </a> | web | <a href="#">discuss</a>
+                    </p>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
